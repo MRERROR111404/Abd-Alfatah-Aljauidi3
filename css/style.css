@@ -1,0 +1,908 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Open+Sans:wght@400;200&family=Roboto:wght@500&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap'); */
+
+
+/* لتعيين لون الـ scroll */
+::-webkit-scrollbar {
+    background-color: white;/* لون المنطقة الخلفية للشريط */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color:  black; /* لون الشريط */
+  }
+  
+  /* لتعيين عرض الـ scroll */
+  ::-webkit-scrollbar {
+    width: 0.3%;
+  }
+  
+
+:root{
+    --main-color:red;
+    --main-margin:190px;
+    --sec-margin:100px;
+}
+
+*{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-weight: 800;
+    /* font-family: 'Leckerli One', cursive;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Work Sans', sans-serif; */
+}
+
+
+.parent {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .parent {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .parent {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .parent {
+      width: 1170px;
+    }
+}
+
+a{
+    color: black;
+}
+
+/*start header */
+
+header{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+    padding: 15px;
+}
+
+header .parent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo a {
+font-size: 30px;
+color: black;
+}
+
+.logo a span {
+    color: var(--main-color);
+}
+
+
+.navbar nav ul li a {
+text-transform: capitalize;
+
+}
+
+@media (min-width:616px){
+
+    
+ 
+    
+    .navbar nav ul {
+        display: flex;
+
+    
+    }
+
+    
+    .navbar nav i {
+display: none;
+
+    }
+    .navbar nav ul li a {
+        margin: 0 15px;
+position: relative;
+
+    }
+
+
+    .navbar nav ul li a::before {
+
+content: "";
+position: absolute;
+left: -5px;
+bottom: -25px;
+background-color: var(--main-color);
+height: 2px;
+width: 0;
+transition: 0.3s;
+    }
+
+
+
+
+
+    .navbar nav ul li a:hover::before {
+width: calc(100% + 10px);
+    }
+
+
+}
+
+
+@media (max-width:616px){
+
+    header {
+        position: relative;
+    }
+
+    
+
+.navbar nav ul {
+    position: absolute;
+    left: 0;
+    bottom:-245px;
+    background-color: #d4d4d4;
+   width: 0;
+display: none;
+
+
+    
+  
+}
+
+.navbar nav i{
+    font-size: 25px;
+}
+
+
+.navbar nav ul li a{
+  
+
+width: 100%;
+padding: 5px;
+color: black;
+
+}
+
+.navbar nav ul li {
+    margin-top: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #666;
+ 
+}
+
+.navbar nav:hover ul {
+   
+display: block;
+width:100%;
+}
+
+
+    
+}
+
+
+
+/*end header*/
+
+/*start landing */
+
+
+.landing .parent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-basis: 20px;
+    margin-top: 100px;
+} 
+
+.landing .parent .title{
+    padding: 10px;
+}
+
+
+.landing .parent .title h1 {
+    /* text-transform: uppercase; */
+font-size: 60px;
+margin-bottom: 18px;
+
+
+}
+
+
+
+.landing .parent .title p {
+    color: #666;
+font-size: 25px;
+line-height: 1.5;
+/* width: 90%; */
+
+}
+
+
+
+.landing .parent .title button {
+color: white;
+background-color: var(--main-color);
+border-radius: 8px;
+border: none;
+font-size: 20px;
+padding: 10px 20px ;
+margin-top: 25px;
+transition: 0.3s;
+
+
+}
+
+
+
+.landing .parent .title button:hover {
+background-color: white;
+color: var(--main-color);
+outline: 1px solid var(--main-color);
+cursor: pointer;
+
+}
+
+
+.landing .parent .image img {
+width: 350px;
+height: 350px;
+
+
+}
+
+
+
+@media (max-width:616px){
+
+
+    .landing .parent {
+margin-top: 30px;
+
+    }
+
+    
+
+.landing .parent .image img {
+    height: 250px;
+    width: 250px;
+    margin-top: 40px;
+ 
+}
+}
+
+/* end landing  */
+
+
+/* start about */
+
+
+.about {
+  
+    padding: 40px 0;
+    margin-top: var(--main-margin);
+    background-color: #fafafa;
+  
+}
+
+
+.section-title{
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 50px;
+   
+}
+
+
+.section-title:hover {
+cursor: default;
+}
+
+.section-title::before {
+    position: absolute;
+content: "";
+
+bottom: -20px;
+left: -5px ;
+background-color: var(--main-color);
+width: 0;
+height: 3px;
+transition: 0.4s;
+
+
+
+}
+    
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    
+    top: -10px;
+    right: -5px ;
+    background-color: var(--main-color);
+    width:0;
+    height: 3px;
+    transition: 0.4s;
+    
+    
+
+}
+
+
+
+.section-title:hover::after{
+    width: calc(100% + 10px);
+    
+
+}
+
+
+.section-title:hover::before{
+    width: calc(100% + 10px);
+
+}
+
+
+
+
+
+.about .essay {
+  
+    display: flex;
+  
+  
+}
+
+
+
+.description h1 {
+font-size: 40px;
+font-weight: bold;
+margin-bottom: 10px;
+
+
+}
+
+.description p {
+    font-size: 17px;
+    padding: 10px;
+    line-height: 1.8;
+
+}
+
+.sec-essay{
+    display: flex;
+    margin-top: 50px;
+}
+
+
+.sec-essay i{
+font-size: 40px;
+color: var(--main-color);
+}
+
+.first-para{
+    display: flex;
+  
+ 
+}
+
+.sec-para{
+    display: flex;
+ 
+  margin-left: 40px;
+  
+}
+
+
+.first-para p{
+    padding: 15px;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+.sec-para p{
+    padding: 15px;
+  font-size: 15px;
+ 
+}
+
+
+
+
+
+
+
+
+
+.essay .image{
+    padding-right: 40px;
+}
+
+
+
+.essay .image img {
+
+
+    width: 180px;
+    height: 160px;
+    border-radius: 50%;
+
+}
+
+
+
+
+
+@media (max-width:740px){
+    .sec-essay{
+     
+flex-wrap: wrap;
+    }
+
+    
+.sec-para{
+   
+  margin-left: 0;
+  
+}
+
+}
+
+
+
+
+@media (max-width:605px){
+.essay{
+    flex-wrap: wrap;
+}
+
+.title{
+    margin-top: 20px;
+}
+
+.about .essay {
+  
+ justify-content: center;
+  
+  
+}
+
+.title h1{
+    text-align: center;
+}
+
+.about {
+    margin-top: 15px;
+}
+
+}
+
+
+
+
+
+/* start sevices */
+.services {
+ margin: var(--main-margin) auto  0 auto;
+    
+}
+
+
+
+
+.services h1 {
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 40px;
+    position: relative;
+   
+}
+
+
+.services h1:hover {
+cursor: default;
+}
+
+.services h1::before {
+    position: absolute;
+content: "";
+
+bottom: -20px;
+left: -5px ;
+background-color: var(--main-color);
+width: 0;
+height: 3px;
+transition: 0.4s;
+
+
+
+}
+    
+
+.services h1::after {
+    position: absolute;
+    content: "";
+    
+    top: -10px;
+    right: -5px ;
+    background-color: var(--main-color);
+    width:0;
+    height: 3px;
+    transition: 0.4s;
+    
+    
+
+}
+
+
+
+.services h1:hover::after{
+    width: calc(100% + 10px);
+    
+
+}
+
+
+.services h1:hover::before{
+    width: calc(100% + 10px);
+
+}
+
+
+
+
+
+
+.services .parent {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+gap: 20px;
+margin-top: var(--sec-margin);
+
+
+}
+
+@media (max-width:500px){
+    
+    
+.services .parent {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    gap: 20px;
+
+
+    
+    }
+    
+}
+
+
+.services .parent .first-ess , .sec-ess{
+padding: 10px;
+width: 100%;
+
+
+}
+
+
+.services .parent .first-ess p{
+    width: 100%;
+    margin-bottom: 50px;
+    border: 1px solid #666;
+    border-radius: 15px;
+    padding: 20px;
+
+
+
+
+}
+
+
+
+.services .parent .sec-ess p{
+    margin-bottom: 50px;
+    border: 1px solid #666;
+    border-radius: 15px;
+    padding: 20px;
+
+
+}
+
+
+.services .parent .image {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services .parent .image img {
+width: 100%;
+  margin: auto;
+}
+
+
+
+
+@media (max-width:751px){
+
+    .services .parent .image img {
+        width: 70%;
+    }
+
+}
+
+
+@media (max-width:605px){
+
+.services{
+    margin-top: 15px;
+}
+}
+
+
+
+
+/* start courses */
+
+.courses {
+    margin-top: var(--main-margin);
+}
+
+.courses .parent .cards{
+display: grid;
+grid-template-columns: repeat(auto-fill , minmax(340px , 1fr));
+gap: 20px;
+}
+
+
+.courses .parent .card{
+border: 1px solid #dddddd ;
+box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+border-radius: 15px;
+position: relative;
+
+}
+
+
+
+.card img{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card h1 {
+text-align: center;
+padding: 10px;
+font-size: 25px;
+}
+
+
+.card p {
+color: #666;
+padding: 0 5px 15px 8px ;
+line-height: 1.4;
+font-size: 17px ;
+}
+
+.card .btn {
+    
+display: flex;
+justify-content: center;
+}
+
+.card button {
+    border: none;
+    padding: 10px 30px;
+    background-color: var(--main-color);
+    color:white;
+    border-radius: 10px ;
+    cursor: pointer;
+margin-bottom: 10px;
+    
+}
+
+
+.card button:hover {
+background-color: white;
+color: var(--main-color);
+outline: 1px solid var(--main-color);
+
+
+
+}
+
+@media (max-width:1180px){
+    .courses{
+        margin-top: 50px;
+    }
+}
+
+/* end courses */
+
+
+
+/* start footer */
+footer{
+    background-color: black;
+    color: white;
+
+}
+
+footer .parent{
+    margin-top: var(--main-margin);
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px,1fr));
+    gap: 40px;
+    padding: 30px 0;
+}
+
+
+footer .parent div p{
+line-height: 1.6;
+margin-top: 15px;
+
+}
+
+
+footer .parent div a{
+color: white;
+margin-top: 15px;
+display: block;
+
+transition: 0.3;
+cursor: pointer;
+
+}
+
+
+
+
+
+footer .parent div a:hover{
+    text-decoration: underline;
+
+}
+
+footer .parent div:last-child h2{
+margin-top: 15px;
+}
+
+
+footer .parent div:last-child h3{
+margin-top: 5px;
+font-size: 15px;
+
+}   
+
+
+
+footer .parent div:not(:first-child) {
+text-align: center;
+
+}
+
+
+
+.copy {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: black;
+    border-top: 1px solid white;
+    
+}
+
+
+.copy h1{
+font-size: 15px;
+color: wheat;
+
+}
+
+/* add  */
+
+
+
+
+.progress2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 1%;
+    background-color: black;
+  
+  }
+  
+  .bar{
+    display: block;
+  height: 100%;
+  width: 0;
+  
+  background-color: rgb(237, 9, 9);
+  
+  }
+
+  
+  
+
+  
+#scroll-btn {
+  
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 999;
+    border-radius: 100%;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+   height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transition: all 1s ease;
+    outline: none;
+  
+  }
+  
+  
+  .fa-arrow-up{
+    font-size: 20px;
+    transition: all 1s ease;
+  }
+  
+  
+  button img{
+    animation: slideContinuous2 1s linear infinite;
+  }
+  
+  
+  
+  
+    
+  
+  @media only screen and (max-width: 641px) and (max-height: 361px) {
+  
+    .h-img{
+    
+    
+    height: 100%
+    
+    
+    }
+  
+  
+    #toggleButton{
+      width: 5%;
+      height: 5%;
+    }
+    }
